@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spruchanzeige</title>
+  <style>
+    body {
+      margin: 0;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: sans-serif;
+      font-size: 4em;
+      color: black;
+      text-align: center;
+      padding: 1em;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="anzeige">Lade...</div>
+  <script>
+    const spruch = new URLSearchParams(location.search).get('spruch');
+    document.getElementById("anzeige").textContent = spruch || "Kein Spruch angegeben.";
+  </script>
+</body>
+
+</html>
